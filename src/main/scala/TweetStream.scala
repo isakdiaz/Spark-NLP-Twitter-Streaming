@@ -54,10 +54,9 @@ object TweetStream {
 
       rdd.foreachPartition { partitionIter =>
         val props = new Properties()
-        val bootstrap = "35.231.59.194:9092" //-- your external ip of GCP VM, example: 10.0.0.1:9092
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer")
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer")
-        props.put("bootstrap.servers", bootstrap)
+        props.put("bootstrap.servers", bootstrap_server)
         val producer = new KafkaProducer[String, String](props)
         partitionIter.foreach { elem =>
           val dat = elem.toString()
