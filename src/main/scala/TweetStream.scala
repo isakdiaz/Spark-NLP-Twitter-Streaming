@@ -1,5 +1,4 @@
 import java.util.Properties
-
 import org.apache.spark.{SparkConf, SparkContext}
 import twitter4j.conf.ConfigurationBuilder
 import twitter4j.auth.OAuthAuthorization
@@ -7,11 +6,11 @@ import org.apache.kafka.clients.producer.{KafkaProducer, ProducerRecord}
 import org.apache.spark.streaming.twitter.TwitterUtils
 import org.apache.spark.streaming.{StreamingContext, Seconds}
 
-import org.apache.kafka.common.serialization.StringDeserializer
-import org.apache.spark.streaming.kafka010._
-import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
-import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
-import twitter4j.Status
+//import org.apache.kafka.common.serialization.StringDeserializer
+//import org.apache.spark.streaming.kafka010._
+//import org.apache.spark.streaming.kafka010.LocationStrategies.PreferConsistent
+//import org.apache.spark.streaming.kafka010.ConsumerStrategies.Subscribe
+//import twitter4j.Status
 
 
 object TweetStream {
